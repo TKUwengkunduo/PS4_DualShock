@@ -38,8 +38,8 @@ class JoystickTeleop(Node):
         pygame.event.pump()  # 更新搖桿狀態
 
         # PS4 左搖桿控制速度：X 軸是左右，Y 軸是前後（反轉 Y）
-        axis_left_x = self.joystick.get_axis(2)  # 左搖桿左右
-        axis_left_y = -self.joystick.get_axis(3)  # 左搖桿前後（反轉）
+        axis_left_x = self.joystick.get_axis(0)  # 左搖桿左右
+        axis_left_y = self.joystick.get_axis(1)  # 左搖桿前後（反轉）
 
         # Deadzone 處理
         if abs(axis_left_x) < 0.2:

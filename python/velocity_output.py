@@ -25,8 +25,8 @@ try:
         pygame.event.pump()  # Update joystick state
 
         # Read axis values (Left Stick Y and X by default)
-        move_input = -joystick.get_axis(3)  # Left Stick Y (forward/backward)
-        turn_input = joystick.get_axis(2)   # Left Stick X (left/right)
+        move_input = -joystick.get_axis(1)  # Left Stick Y (forward/backward)
+        turn_input = joystick.get_axis(0)   # Left Stick X (left/right)
 
         # Deadzone filtering
         if abs(move_input) < 0.1:

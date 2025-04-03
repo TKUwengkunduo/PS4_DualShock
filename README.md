@@ -76,3 +76,12 @@ source install/setup.bash
 ros2 run ps4 ps4_velocity
 ros2 run ps4 ps4_velocity --ros-args -p max_speed:=1.5 -p max_angular:=120.0
 ```
+
+3. Subscribe `/cmd_vel` Node:
+```bash
+ros2 topic list
+ros2 topic echo /cmd_vel
+```
+
+## Note
+The numbers of the PS4 joysticks read by Linux and Windows are different. Therefore, the speed conversion function can only be used with the left joystick. If you need to change it, please reconfirm the numbers.
