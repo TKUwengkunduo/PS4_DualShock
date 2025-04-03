@@ -1,3 +1,9 @@
+"""
+pygame version
+    Windows: 
+    Linux: 2.1.3
+"""
+
 import pygame
 import time
 
