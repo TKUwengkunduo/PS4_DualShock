@@ -1,6 +1,6 @@
 """
 pygame version
-    Windows: 
+    Windows: 2.6.1
     Linux: 2.1.3
 """
 

@@ -9,8 +9,9 @@ PS4_DualShock/
 ├── python/
 │   ├── ps4_test.py          # General controller input tester
 │   └── velocity_output.py   # Speed and angular velocity simulator
-├── ros2/
-    └── ps4_teleop_node.py   # ROS 2 version for publishing Twist messages
+└── ros2/
+    └── src
+        └── ps4              # ROS2 package
 ```
 
 ---
@@ -60,7 +61,7 @@ Speed: 1.20 m/s | Angular: -45.00 deg/s
 
 ### Description:
 - Publishes joystick values as `/cmd_vel` Twist messages.
-- Compatible with ROS 2 mobile robot stacks.
+- Compatible with ROS2 mobile robot stacks.
 
 ### How to Use:
 1. Build the package:
@@ -72,6 +73,6 @@ source install/setup.bash
 
 2. Run with ROS2:
 ```bash
-ros2 run my_teleop_pkg ps4_teleop_node
-ros2 run my_teleop_pkg ps4_teleop_node --ros-args -p max_speed:=1.5 -p max_angular:=120.0
+ros2 run ps4 ps4_velocity
+ros2 run ps4 ps4_velocity --ros-args -p max_speed:=1.5 -p max_angular:=120.0
 ```
